@@ -24,4 +24,5 @@ public boolean validateDisplayStatusOfLogoutLink() {
 	boolean displayStatus = logoutLink.isDisplayed();
 	return displayStatus;
 }
+
 }

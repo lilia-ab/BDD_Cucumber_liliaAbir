@@ -19,27 +19,26 @@ public class Login {
     
 	  
 
-    @Given("User navigates to login page")
+    @Given("User navigates to loginpage")
     public void user_navigates_to_login_page() {
-        driver = DriverFactory.getDriver();
+    	driver = DriverFactory.getDriver();
         Home_Page homepage = new Home_Page(driver);
         homepage.clickOnMyAccount();
-        Login_Page loginpage = new Login_Page(driver);
-        loginpage = homepage.clickOnLogin();
+        homepage.clickOnLogin();
         
     }
 
-    @When("^User enters valid email (.+)$")
-    public void user_enters_valid_email(String emailText) {
+    @When("^User enters valid user email(.+)$")
+    public void user_enters_valid_email(String email) {
     	Login_Page loginpage = new Login_Page(driver);
-    	loginpage.enterEmail(emailText);
+    	loginpage.enterEmail(email);
         
     }
 
-    @And("^User enters valid password (.+)$")
-    public void user_enters_valid_password(String passwordText) {
+    @And("^User enters valid pass password(.+)$")
+    public void user_enters_valid_password(String password) {
     	Login_Page loginpage = new Login_Page(driver);
-    	loginpage.enterPassword(passwordText);
+    	loginpage.enterPassword(password);
         
     }
     @And("User clicks on Login button")

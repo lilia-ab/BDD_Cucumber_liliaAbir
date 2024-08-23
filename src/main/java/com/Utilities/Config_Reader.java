@@ -9,7 +9,7 @@ public class Config_Reader {
 
 	public static Properties initialisation() throws Exception {
 		prop = new Properties();
-		ip = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\resources\\config\\Config.properties");
+		ip = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\resources\\config\\config.properties");
 		prop.load(ip);
 
 		return prop;
